@@ -1,0 +1,13 @@
+G:\doan.NET\form1\form1\bin\Debug\form1.exe.config
+G:\doan.NET\form1\form1\bin\Debug\form1.exe
+G:\doan.NET\form1\form1\bin\Debug\form1.pdb
+G:\doan.NET\form1\form1\obj\Debug\form1.dangky.resources
+G:\doan.NET\form1\form1\obj\Debug\form1.Dangnhap.resources
+G:\doan.NET\form1\form1\obj\Debug\form1.Form1.resources
+G:\doan.NET\form1\form1\obj\Debug\form1.Properties.Resources.resources
+G:\doan.NET\form1\form1\obj\Debug\form1.csproj.GenerateResource.Cache
+G:\doan.NET\form1\form1\obj\Debug\form1.exe
+G:\doan.NET\form1\form1\obj\Debug\form1.pdb
+G:\doan.NET\form1\form1\obj\Debug\form1.csproj.AssemblyReference.cache
+G:\doan.NET\form1\form1\obj\Debug\form1.csproj.CoreCompileInputs.cache
+G:\doan.NET\form1\form1\obj\Debug\form1.QLnhanvien.resources
