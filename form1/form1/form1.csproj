@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="Ketnoi.cs" />
     <Compile Include="Model\Diadiem.cs" />
+    <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhaHang.cs" />
     <Compile Include="Model\Nhanvien.cs" />
     <Compile Include="Model\QuanLy.cs" />
@@ -98,11 +99,41 @@
     <Compile Include="QLnhanvien.Designer.cs">
       <DependentUpon>QLnhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemDiadiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemDiadiem.Designer.cs">
+      <DependentUpon>ThemDiadiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKsan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemKsan.Designer.cs">
+      <DependentUpon>ThemKsan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="themphuongtien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="themphuongtien.Designer.cs">
+      <DependentUpon>themphuongtien.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemThongTinU.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ThemThongTinU.Designer.cs">
       <DependentUpon>ThemThongTinU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Themtour.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Themtour.Designer.cs">
+      <DependentUpon>Themtour.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinNhanVienU.cs">
       <SubType>UserControl</SubType>
@@ -149,8 +180,23 @@
     <EmbeddedResource Include="QLnhanvien.resx">
       <DependentUpon>QLnhanvien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemDiadiem.resx">
+      <DependentUpon>ThemDiadiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKsan.resx">
+      <DependentUpon>ThemKsan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themphuongtien.resx">
+      <DependentUpon>themphuongtien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemThongTinU.resx">
       <DependentUpon>ThemThongTinU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Themtour.resx">
+      <DependentUpon>Themtour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinNhanVienU.resx">
       <DependentUpon>ThongTinNhanVienU.cs</DependentUpon>

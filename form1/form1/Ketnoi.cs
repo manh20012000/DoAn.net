@@ -41,7 +41,7 @@ namespace form1
 
                 {
                     conn.Open();
-                    string SelectTour = "SELECT * FROM TourDL,Diadiem where Diadiem.MaDiaDiem = TourDL.MaDiaDiem";
+                    string SelectTour = "SELECT * FROM TourDL,Diadiem,KhachSan,PhuongTien where Diadiem.MaDiaDiem = TourDL.MaDiaDiem and TourDL.MaKhachSan = KhachSan.MaKhachSan and TourDL.MaPhuongTien = PhuongTien.MaPhuongTien";
                            
 
                     SqlCommand command = new SqlCommand(SelectTour, conn);
@@ -53,13 +53,18 @@ namespace form1
                             int MaTour = Convert.ToInt32(reader["MaTour"]);
                             string anh = reader["Anh"].ToString();
                             string TenTour = reader["TenTour"].ToString();
-                            string Thoigian = reader["ThoiGian"].ToString();
-                            string  MaDiaDiem = reader["DiaChi"].ToString();
+                            DateTime ngaykh = DateTime.Parse(reader["NgayKhoiHanh"].ToString());
+                            DateTime ngaykt = DateTime.Parse(reader["NgayKetThuc"].ToString());
+                            string diemdon = reader["DiemDon"].ToString();
                             string Ghichu = reader["Mota"].ToString();
                             float GiaTien = Convert.ToSingle(reader["GiaTien"]);
                             string Diachi= reader["TenDiaDiem"].ToString();
-                            danhsach.Add( new Toudulich(MaTour, TenTour,anh, Thoigian,  Ghichu, GiaTien, Diachi, MaDiaDiem));
+                            string tenks = reader["TenKhachSan"].ToString();
+                            string tenphuongtien = reader["TenPhuongTien"].ToString();
+                            int sove = Convert.ToInt32(reader["SoVe"]);
+                            danhsach.Add( new Toudulich(MaTour, TenTour,  anh, Ghichu, GiaTien,  Diachi, ngaykh, ngaykt, diemdon,  tenks,  tenphuongtien, sove));
                         }
+                         
                     } 
                 }
             }

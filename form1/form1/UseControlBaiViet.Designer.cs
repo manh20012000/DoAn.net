@@ -36,15 +36,23 @@ namespace form1
             this.label6 = new System.Windows.Forms.Label();
             this.txtmatour = new System.Windows.Forms.TextBox();
             this.txtGhicu = new System.Windows.Forms.TextBox();
-            this.txtnagyBd = new System.Windows.Forms.TextBox();
+            this.txttenks = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
-            this.txtdiachi = new System.Windows.Forms.TextBox();
+            this.txtdiemdon = new System.Windows.Forms.TextBox();
             this.txtTentour = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtdiadiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtnbd = new System.Windows.Forms.TextBox();
+            this.txtnkt = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtve = new System.Windows.Forms.TextBox();
+            this.txtptien = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +86,7 @@ namespace form1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(241, 306);
+            this.label5.Location = new System.Drawing.Point(246, 441);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 5;
@@ -90,45 +98,49 @@ namespace form1
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(215, 248);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Thời gian du lịch";
             // 
             // txtmatour
             // 
             this.txtmatour.Location = new System.Drawing.Point(71, 238);
             this.txtmatour.Name = "txtmatour";
-            this.txtmatour.Size = new System.Drawing.Size(116, 20);
+            this.txtmatour.Size = new System.Drawing.Size(107, 20);
             this.txtmatour.TabIndex = 7;
+            this.txtmatour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtGhicu
             // 
-            this.txtGhicu.Location = new System.Drawing.Point(71, 382);
+            this.txtGhicu.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtGhicu.Location = new System.Drawing.Point(295, 3);
             this.txtGhicu.Multiline = true;
             this.txtGhicu.Name = "txtGhicu";
-            this.txtGhicu.Size = new System.Drawing.Size(397, 44);
+            this.txtGhicu.Size = new System.Drawing.Size(200, 185);
             this.txtGhicu.TabIndex = 8;
+            this.txtGhicu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtnagyBd
+            // txttenks
             // 
-            this.txtnagyBd.Location = new System.Drawing.Point(306, 245);
-            this.txtnagyBd.Name = "txtnagyBd";
-            this.txtnagyBd.Size = new System.Drawing.Size(162, 20);
-            this.txtnagyBd.TabIndex = 10;
+            this.txttenks.Location = new System.Drawing.Point(318, 238);
+            this.txttenks.Name = "txttenks";
+            this.txttenks.Size = new System.Drawing.Size(162, 20);
+            this.txttenks.TabIndex = 10;
             // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(300, 306);
+            this.txtGia.Location = new System.Drawing.Point(295, 438);
             this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(138, 20);
+            this.txtGia.Size = new System.Drawing.Size(126, 20);
             this.txtGia.TabIndex = 11;
+            this.txtGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtdiachi
+            // txtdiemdon
             // 
-            this.txtdiachi.Location = new System.Drawing.Point(76, 309);
-            this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(116, 20);
-            this.txtdiachi.TabIndex = 12;
+            this.txtdiemdon.Location = new System.Drawing.Point(103, 312);
+            this.txtdiemdon.Name = "txtdiemdon";
+            this.txtdiemdon.Size = new System.Drawing.Size(353, 20);
+            this.txtdiemdon.TabIndex = 12;
+            this.txtdiemdon.TextChanged += new System.EventHandler(this.txtdiachi_TextChanged);
             // 
             // txtTentour
             // 
@@ -137,23 +149,14 @@ namespace form1
             this.txtTentour.Size = new System.Drawing.Size(392, 20);
             this.txtTentour.TabIndex = 13;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 396);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Mô tả";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(10, 319);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Địa điểm";
+            this.label8.Text = "Vị trí xuất phát";
             // 
             // txtdiadiem
             // 
@@ -167,7 +170,7 @@ namespace form1
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox1.Location = new System.Drawing.Point(4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(482, 222);
+            this.pictureBox1.Size = new System.Drawing.Size(285, 229);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -175,25 +178,108 @@ namespace form1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(444, 306);
+            this.label3.Location = new System.Drawing.Point(440, 439);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "VND";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 390);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "NgayBd";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(247, 390);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "NgayKt";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 439);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Tên phương tiện ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(210, 245);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Tên khách sạn";
+            // 
+            // txtnbd
+            // 
+            this.txtnbd.Location = new System.Drawing.Point(70, 387);
+            this.txtnbd.Name = "txtnbd";
+            this.txtnbd.Size = new System.Drawing.Size(158, 20);
+            this.txtnbd.TabIndex = 22;
+            // 
+            // txtnkt
+            // 
+            this.txtnkt.Location = new System.Drawing.Point(295, 383);
+            this.txtnkt.Name = "txtnkt";
+            this.txtnkt.Size = new System.Drawing.Size(185, 20);
+            this.txtnkt.TabIndex = 23;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(304, 210);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Số vé";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtve
+            // 
+            this.txtve.Location = new System.Drawing.Point(361, 203);
+            this.txtve.Name = "txtve";
+            this.txtve.Size = new System.Drawing.Size(119, 20);
+            this.txtve.TabIndex = 25;
+            // 
+            // txtptien
+            // 
+            this.txtptien.Location = new System.Drawing.Point(103, 438);
+            this.txtptien.Name = "txtptien";
+            this.txtptien.Size = new System.Drawing.Size(125, 20);
+            this.txtptien.TabIndex = 26;
+            this.txtptien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // UseControlBaiViet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Controls.Add(this.txtptien);
+            this.Controls.Add(this.txtve);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtnkt);
+            this.Controls.Add(this.txtnbd);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtdiadiem);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTentour);
-            this.Controls.Add(this.txtdiachi);
+            this.Controls.Add(this.txtdiemdon);
             this.Controls.Add(this.txtGia);
-            this.Controls.Add(this.txtnagyBd);
+            this.Controls.Add(this.txttenks);
             this.Controls.Add(this.txtGhicu);
             this.Controls.Add(this.txtmatour);
             this.Controls.Add(this.label6);
@@ -203,7 +289,7 @@ namespace form1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UseControlBaiViet";
-            this.Size = new System.Drawing.Size(487, 429);
+            this.Size = new System.Drawing.Size(498, 463);
             this.Load += new System.EventHandler(this.UseControlBaiViet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -221,13 +307,21 @@ namespace form1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtmatour;
         private System.Windows.Forms.TextBox txtGhicu;
-        private System.Windows.Forms.TextBox txtnagyBd;
+        private System.Windows.Forms.TextBox txttenks;
         private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.TextBox txtdiachi;
+        private System.Windows.Forms.TextBox txtdiemdon;
         private System.Windows.Forms.TextBox txtTentour;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtdiadiem;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtnbd;
+        private System.Windows.Forms.TextBox txtnkt;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtve;
+        private System.Windows.Forms.TextBox txtptien;
     }
 }

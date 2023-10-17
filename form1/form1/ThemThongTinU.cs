@@ -16,12 +16,17 @@ namespace form1
         public ThemThongTinU()
         {
             InitializeComponent();
-            parentPanel = new Panel();
-            parentPanel.Location = new Point(175, 49);
-            parentPanel.Size = new Size(825, 544);
-            parentPanel.BackColor = Color.Gray;
-            parentPanel.Controls.Add(panel2);
-            this.Controls.Add(parentPanel);
+            panel2.Controls.Add(new ThemKhachHang());
+
+        }
+        private void ShowUserControl(UserControl userControl)
+        {
+            // Xóa UserControl hiện tại (nếu có)
+            panel2.Controls.Clear();
+
+            // Thêm UserControl mới vào Panel
+            userControl.Dock = DockStyle.Fill;
+            panel2.Controls.Add(userControl);
         }
 
         private void ThemThongTinU_Load(object sender, EventArgs e)
@@ -39,54 +44,53 @@ namespace form1
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string selectedFile = openFileDialog1.FileName;
-                pictureBox1.Image = Image.FromFile(selectedFile);
+                string selectedFile = openFileDialog1.FileName; 
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = null;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*panel2.Visible = true;*/
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            parentPanel.Controls.Add(panel2);
+            ShowUserControl(new Themtour());
+
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ShowUserControl(new themphuongtien());
 
 
-           panel5.Visible = false;
-            panel2.Visible = false;
-           panel4.Visible = false;
-           /*  panel3.Visible = true; */
-           
-            parentPanel.Controls.Add(panel3);
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {   ;
+        {
 
-            /* panel2.Visible = false;
-              panel3.Visible = false;
-              panel4.Visible = true;
-              panel5.Visible = false;*/
-            parentPanel.Controls.Add(panel4);
+
+            ShowUserControl(new ThemKsan());
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            /*panel5.Visible = true;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;*/
-            parentPanel.Controls.Add(panel5);
+            ShowUserControl(new ThemDiadiem());
+        }
+
+        private void Themkhachhang_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new ThemKhachHang());
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+              
         }
     }
 }
