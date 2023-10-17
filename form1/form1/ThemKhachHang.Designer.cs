@@ -179,9 +179,9 @@ namespace form1
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 334);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 330);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(789, 207);
+            this.dataGridView1.Size = new System.Drawing.Size(789, 190);
             this.dataGridView1.TabIndex = 17;
             // 
             // ThemKhachHang
@@ -206,7 +206,7 @@ namespace form1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ThemKhachHang";
-            this.Size = new System.Drawing.Size(825, 544);
+            this.Size = new System.Drawing.Size(825, 525);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
