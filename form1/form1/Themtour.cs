@@ -93,25 +93,33 @@ namespace form1
             cmbks.SelectedItem = "";
             txtsove.Text = "";
         }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string sql = string.Format("insert into TourDL(Anh,TenTour,Mota,MaDiaDiem,GiaTien,NgayKhoiHanh,NgayKetThuc,DiemDon,MaPhuongTien,MaKhachSan,SoVe)"
+            SqlConnection conn = new SqlConnection(Ketnoi.constr);
+            try
+            {
+                conn.Open();
+                string sql = string.Format("insert into TourDL(Anh,TenTour,Mota,MaDiaDiem,GiaTien,NgayKhoiHanh,NgayKetThuc,DiemDon,MaPhuongTien,MaKhachSan,SoVe)"
                 + " Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", "anh", txtTen.Text, txtmota.Text, cmbmadd.SelectedValue,
-                txtgiatien.Text, ngaykh.Value, ngaykt.Value, txtDiemdon.Text, cmbpt.SelectedValue, cmbks.SelectedValue,txtsove.Text);
-            bool kt = kn.Thucthi(sql);
-            if(kt)
-            {
-                MessageBox.Show("Thêm thành công!");
-                getdata();
-                clear();
+                txtgiatien.Text, ngaykh.Value, ngaykt.Value, txtDiemdon.Text, cmbpt.SelectedValue, cmbks.SelectedValue, txtsove.Text);
+                bool kt = kn.Thucthi(sql);
+                if (kt)
+                {
+                    MessageBox.Show("Them thanh cong!");
+                    getdata();
+                    btclear.PerformClick();
+                }
+                else
+                    MessageBox.Show("Them that bai");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Thêm thất bại!");
+                MessageBox.Show("Loi ket noi :" + ex.Message);
             }
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+            private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = e.RowIndex;
             if(r>=0)
@@ -132,22 +140,29 @@ namespace form1
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string sql = string.Format("update TourDL" +
+            SqlConnection conn = new SqlConnection(Ketnoi.constr);
+            try
+            {
+                conn.Open();
+                string sql = string.Format("update TourDL" +
                 " set Anh='{0}',TenTour='{1}',Mota='{2}',MaDiaDiem='{3}'," +
                 " GiaTien='{4}',NgayKhoiHanh='{5}',NgayKetThuc='{6}',DiemDon='{7}'," +
                 "MaPhuongTien='{8}',MaKhachSan='{9}',SoVe='{10}'"
                 + " where MaTour='{11}'", "anh", txtTen.Text, txtmota.Text, cmbmadd.SelectedValue,
                 txtgiatien.Text, ngaykh.Value, ngaykt.Value, txtDiemdon.Text, cmbpt.SelectedValue, cmbks.SelectedValue, txtsove.Text,matour);
-            bool kt = kn.Thucthi(sql);
-            if (kt)
-            {
-                MessageBox.Show("Sửa thành công!");
-                getdata();
-                clear();
+                bool kt = kn.Thucthi(sql);
+                if (kt)
+                {
+                    MessageBox.Show("Suathanh cong!");
+                    getdata();
+                    btclear.PerformClick();
+                }
+                else
+                    MessageBox.Show("Sua that bai");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Sửa thất bại!");
+                MessageBox.Show("Loi ket noi :" + ex.Message);
             }
         }
 
@@ -163,7 +178,7 @@ namespace form1
                 {
                     MessageBox.Show("Xóa thành công!");
                     getdata();
-                    clear();
+                    btclear.PerformClick();
                 }
                 else
                 {
@@ -178,6 +193,20 @@ namespace form1
             string query = string.Format("select TenPhuongTien from PhuongTien where MaPhuongTien='{0}'",cmbpt.SelectedValue);
             DataSet ds = kn.selectData(query);
             txtphuongtien.Text = ds.Tables[0].Rows[0]["TenPhuongTien"].ToString();
+        }
+
+        private void btclear_Click(object sender, EventArgs e)
+        {
+            clear();
+            getdata();
+        }
+
+        private void btTimkiem_Click(object sender, EventArgs e)
+        {
+            string query = string.Format(" select * from TourDL  where TenTour like N'%{0}%'", txtTen.Text);
+            DataSet ds = kn.selectData(query);
+            dgvTour.DataSource = ds.Tables[0];
+
         }
     }
 }

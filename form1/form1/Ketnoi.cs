@@ -10,7 +10,7 @@ namespace form1
 {
     class Ketnoi
     {
-        string constr = @"Data Source=LEMANH;Initial Catalog=QLDatTour;Integrated Security=True";
+        public static string  constr = @"Data Source=LEMANH;Initial Catalog=QLDatTour;Integrated Security=True";
         SqlConnection conn;
         public Ketnoi()
         {
