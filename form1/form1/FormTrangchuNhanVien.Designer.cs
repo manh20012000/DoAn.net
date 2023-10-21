@@ -108,7 +108,7 @@ namespace form1
             this.homeU1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.homeU1.Location = new System.Drawing.Point(0, 0);
             this.homeU1.Name = "homeU1";
-            this.homeU1.Size = new System.Drawing.Size(1029, 592);
+            this.homeU1.Size = new System.Drawing.Size(1051, 592);
             this.homeU1.TabIndex = 0;
             this.homeU1.Load += new System.EventHandler(this.homeU1_Load);
             // 

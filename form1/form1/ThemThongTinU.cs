@@ -12,7 +12,7 @@ namespace form1
 {
     public partial class ThemThongTinU : UserControl
     {
-        Panel parentPanel;
+     public  Panel parentPanel;
         public ThemThongTinU()
         {
             InitializeComponent();

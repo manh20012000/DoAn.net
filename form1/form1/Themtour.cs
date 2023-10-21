@@ -12,6 +12,7 @@ namespace form1
 {
     public partial class Themtour : UserControl
     {    public int matour;
+        public string pathImage = "";
         public Themtour()
         {
             InitializeComponent();
@@ -62,8 +63,9 @@ namespace form1
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string selectedFile = openFileDialog1.FileName;
-                pictureBox1.Image = Image.FromFile(selectedFile);
+                string selectedImagePath = openFileDialog1.FileName;
+                pathImage = selectedImagePath;
+                pictureBox1.Image = Image.FromFile(selectedImagePath);
             }
         }
 
@@ -92,6 +94,7 @@ namespace form1
             cmbpt.SelectedItem = "";
             cmbks.SelectedItem = "";
             txtsove.Text = "";
+            pictureBox1.Image = null;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -101,7 +104,7 @@ namespace form1
             {
                 conn.Open();
                 string sql = string.Format("insert into TourDL(Anh,TenTour,Mota,MaDiaDiem,GiaTien,NgayKhoiHanh,NgayKetThuc,DiemDon,MaPhuongTien,MaKhachSan,SoVe)"
-                + " Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", "anh", txtTen.Text, txtmota.Text, cmbmadd.SelectedValue,
+                + " Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", pathImage+"", txtTen.Text, txtmota.Text, cmbmadd.SelectedValue,
                 txtgiatien.Text, ngaykh.Value, ngaykt.Value, txtDiemdon.Text, cmbpt.SelectedValue, cmbks.SelectedValue, txtsove.Text);
                 bool kt = kn.Thucthi(sql);
                 if (kt)
@@ -124,6 +127,7 @@ namespace form1
             int r = e.RowIndex;
             if(r>=0)
             {
+                pictureBox1.Image = Image.FromFile(dgvTour.Rows[r].Cells["anh"].Value.ToString());
                 txtTen.Text =dgvTour.Rows[r].Cells["TenTour"].Value.ToString() ;
                 txtmota.Text = dgvTour.Rows[r].Cells["Mota"].Value.ToString(); ;
                 cmbmadd.SelectedValue = dgvTour.Rows[r].Cells["MaDiaDiem"].Value.ToString(); 
@@ -189,7 +193,7 @@ namespace form1
 
         private void cmbpt_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("ahihih");
+            
             string query = string.Format("select TenPhuongTien from PhuongTien where MaPhuongTien='{0}'",cmbpt.SelectedValue);
             DataSet ds = kn.selectData(query);
             txtphuongtien.Text = ds.Tables[0].Rows[0]["TenPhuongTien"].ToString();
@@ -207,6 +211,13 @@ namespace form1
             DataSet ds = kn.selectData(query);
             dgvTour.DataSource = ds.Tables[0];
 
+        }
+
+        private void cmbks_Click(object sender, EventArgs e)
+        {
+            string query = string.Format("select Tenkhachsan from khachsan where makhachsan='{0}'", cmbks.SelectedValue);
+            DataSet ds = kn.selectData(query);
+            txtphuongtien.Text = ds.Tables[0].Rows[0]["Tenkhachsan"].ToString();
         }
     }
 }

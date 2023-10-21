@@ -22,6 +22,7 @@ namespace form1
         }
         private void UseControlBaiViet_Load(object sender, EventArgs e)
         {
+            pictureBox1.Image = Image.FromFile(tour.Anh.ToString());
             txtmatour.Text = tour.MaTour1.ToString();
             txtTentour.Text = tour.TenTour1.ToString();
             txtGhicu.Text = tour.Mota1.ToString();
@@ -41,6 +42,20 @@ namespace form1
         }
 
         private void txtdiachi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntdangky_Click(object sender, EventArgs e)
+        {
+           
+            
+            new formDangkytour(this.tour).Show();
+            Console.WriteLine("hhahhaha");
+       
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

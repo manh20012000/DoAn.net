@@ -53,6 +53,7 @@ namespace form1
             this.label12 = new System.Windows.Forms.Label();
             this.txtve = new System.Windows.Forms.TextBox();
             this.txtptien = new System.Windows.Forms.TextBox();
+            this.bntdangky = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +87,7 @@ namespace form1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 441);
+            this.label5.Location = new System.Drawing.Point(16, 483);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 5;
@@ -128,7 +129,7 @@ namespace form1
             // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(295, 438);
+            this.txtGia.Location = new System.Drawing.Point(89, 480);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(126, 20);
             this.txtGia.TabIndex = 11;
@@ -173,12 +174,13 @@ namespace form1
             this.pictureBox1.Size = new System.Drawing.Size(285, 229);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(440, 439);
+            this.label3.Location = new System.Drawing.Point(247, 481);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 16);
             this.label3.TabIndex = 17;
@@ -237,7 +239,7 @@ namespace form1
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(304, 210);
+            this.label12.Location = new System.Drawing.Point(275, 435);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(35, 13);
             this.label12.TabIndex = 24;
@@ -246,7 +248,7 @@ namespace form1
             // 
             // txtve
             // 
-            this.txtve.Location = new System.Drawing.Point(361, 203);
+            this.txtve.Location = new System.Drawing.Point(337, 432);
             this.txtve.Name = "txtve";
             this.txtve.Size = new System.Drawing.Size(119, 20);
             this.txtve.TabIndex = 25;
@@ -259,11 +261,22 @@ namespace form1
             this.txtptien.TabIndex = 26;
             this.txtptien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // bntdangky
+            // 
+            this.bntdangky.Location = new System.Drawing.Point(309, 476);
+            this.bntdangky.Name = "bntdangky";
+            this.bntdangky.Size = new System.Drawing.Size(186, 27);
+            this.bntdangky.TabIndex = 27;
+            this.bntdangky.Text = "Dang ký";
+            this.bntdangky.UseVisualStyleBackColor = true;
+            this.bntdangky.Click += new System.EventHandler(this.bntdangky_Click);
+            // 
             // UseControlBaiViet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Controls.Add(this.bntdangky);
             this.Controls.Add(this.txtptien);
             this.Controls.Add(this.txtve);
             this.Controls.Add(this.label12);
@@ -289,7 +302,7 @@ namespace form1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UseControlBaiViet";
-            this.Size = new System.Drawing.Size(498, 463);
+            this.Size = new System.Drawing.Size(499, 506);
             this.Load += new System.EventHandler(this.UseControlBaiViet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -323,5 +336,6 @@ namespace form1
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtve;
         private System.Windows.Forms.TextBox txtptien;
+        private System.Windows.Forms.Button bntdangky;
     }
 }

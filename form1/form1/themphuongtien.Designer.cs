@@ -30,13 +30,19 @@ namespace form1
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnxoa = new System.Windows.Forms.Button();
+            this.bntthem = new System.Windows.Forms.Button();
+            this.btnsua = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btntkiem = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtmapt = new System.Windows.Forms.TextBox();
+            this.txtloaipt = new System.Windows.Forms.TextBox();
+            this.txttiemkiem = new System.Windows.Forms.TextBox();
+            this.btnclean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,19 +56,19 @@ namespace form1
             this.label1.TabIndex = 1;
             this.label1.Text = "Thêm phương tiện";
             // 
-            // label2
+            // txtl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(316, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Loại phương tiện ";
+            this.txtl.AutoSize = true;
+            this.txtl.Location = new System.Drawing.Point(112, 159);
+            this.txtl.Name = "txtl";
+            this.txtl.Size = new System.Drawing.Size(89, 13);
+            this.txtl.TabIndex = 2;
+            this.txtl.Text = "Loại phương tiện ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(316, 96);
+            this.label5.Location = new System.Drawing.Point(112, 94);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 13);
             this.label5.TabIndex = 5;
@@ -78,53 +84,116 @@ namespace form1
             this.label6.TabIndex = 6;
             this.label6.Text = "Thêm phương tiện";
             // 
-            // button1
+            // btnxoa
             // 
-            this.button1.Location = new System.Drawing.Point(343, 209);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Xóa ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnxoa.Location = new System.Drawing.Point(234, 209);
+            this.btnxoa.Name = "btnxoa";
+            this.btnxoa.Size = new System.Drawing.Size(95, 23);
+            this.btnxoa.TabIndex = 7;
+            this.btnxoa.Text = "Xóa ";
+            this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
-            // button2
+            // bntthem
             // 
-            this.button2.Location = new System.Drawing.Point(169, 209);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bntthem.AutoSize = true;
+            this.bntthem.Location = new System.Drawing.Point(69, 209);
+            this.bntthem.Name = "bntthem";
+            this.bntthem.Size = new System.Drawing.Size(99, 23);
+            this.bntthem.TabIndex = 8;
+            this.bntthem.Text = "Thêm";
+            this.bntthem.UseVisualStyleBackColor = true;
+            this.bntthem.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnsua
             // 
-            this.button3.Location = new System.Drawing.Point(515, 209);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnsua.Location = new System.Drawing.Point(407, 209);
+            this.btnsua.Name = "btnsua";
+            this.btnsua.Size = new System.Drawing.Size(109, 23);
+            this.btnsua.TabIndex = 9;
+            this.btnsua.Text = "Sửa";
+            this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 315);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 313);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(704, 192);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // btntkiem
+            // 
+            this.btntkiem.Location = new System.Drawing.Point(724, 209);
+            this.btntkiem.Name = "btntkiem";
+            this.btntkiem.Size = new System.Drawing.Size(75, 23);
+            this.btntkiem.TabIndex = 11;
+            this.btntkiem.Text = "tìm kiếm ";
+            this.btntkiem.UseVisualStyleBackColor = true;
+            this.btntkiem.Click += new System.EventHandler(this.btntkiem_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(540, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Tìm kiếm ";
+            // 
+            // txtmapt
+            // 
+            this.txtmapt.Location = new System.Drawing.Point(234, 87);
+            this.txtmapt.Name = "txtmapt";
+            this.txtmapt.Size = new System.Drawing.Size(263, 20);
+            this.txtmapt.TabIndex = 13;
+            // 
+            // txtloaipt
+            // 
+            this.txtloaipt.Location = new System.Drawing.Point(234, 152);
+            this.txtloaipt.Name = "txtloaipt";
+            this.txtloaipt.Size = new System.Drawing.Size(263, 20);
+            this.txtloaipt.TabIndex = 14;
+            // 
+            // txttiemkiem
+            // 
+            this.txttiemkiem.Location = new System.Drawing.Point(601, 91);
+            this.txttiemkiem.Name = "txttiemkiem";
+            this.txttiemkiem.Size = new System.Drawing.Size(172, 20);
+            this.txttiemkiem.TabIndex = 15;
+            // 
+            // btnclean
+            // 
+            this.btnclean.Location = new System.Drawing.Point(587, 209);
+            this.btnclean.Name = "btnclean";
+            this.btnclean.Size = new System.Drawing.Size(75, 23);
+            this.btnclean.TabIndex = 16;
+            this.btnclean.Text = "Clean";
+            this.btnclean.UseVisualStyleBackColor = true;
+            this.btnclean.Click += new System.EventHandler(this.btnclean_Click);
             // 
             // themphuongtien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.btnclean);
+            this.Controls.Add(this.txttiemkiem);
+            this.Controls.Add(this.txtloaipt);
+            this.Controls.Add(this.txtmapt);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btntkiem);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnsua);
+            this.Controls.Add(this.bntthem);
+            this.Controls.Add(this.btnxoa);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtl);
             this.Controls.Add(this.label1);
             this.Name = "themphuongtien";
             this.Size = new System.Drawing.Size(825, 544);
@@ -137,12 +206,18 @@ namespace form1
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnxoa;
+        private System.Windows.Forms.Button bntthem;
+        private System.Windows.Forms.Button btnsua;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btntkiem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtmapt;
+        private System.Windows.Forms.TextBox txtloaipt;
+        private System.Windows.Forms.TextBox txttiemkiem;
+        private System.Windows.Forms.Button btnclean;
     }
 }

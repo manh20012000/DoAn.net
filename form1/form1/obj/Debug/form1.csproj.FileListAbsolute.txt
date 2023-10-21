@@ -29,9 +29,10 @@ D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.DangKiTourU.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.HomeU.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.ThemThongTinU.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.ThongTinNhanVienU.resources
-D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.csproj.AssemblyReference.cache
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.ThemKhachHang.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.themphuongtien.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.Themtour.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.ThemDiadiem.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.ThemKsan.resources
+D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.csproj.AssemblyReference.cache
+D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.formDangkytour.resources

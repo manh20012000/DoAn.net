@@ -18,7 +18,6 @@ namespace form1
         }
         public DataSet selectData(string truyvan)
         {
-            
             DataSet ds = new DataSet();
             SqlDataAdapter da = new SqlDataAdapter(truyvan, conn);
             da.Fill(ds);

@@ -43,7 +43,7 @@ namespace form1
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 53);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1010, 538);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1029, 538);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -52,15 +52,15 @@ namespace form1
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 11);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1010, 43);
+            this.panel1.Size = new System.Drawing.Size(1031, 51);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(357, 13);
+            this.label1.Location = new System.Drawing.Point(524, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 2;
@@ -68,7 +68,7 @@ namespace form1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(684, 8);
+            this.button1.Location = new System.Drawing.Point(892, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -77,9 +77,9 @@ namespace form1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(525, 16);
+            this.textBox1.Location = new System.Drawing.Point(606, 15);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(251, 20);
             this.textBox1.TabIndex = 0;
             // 
             // HomeU
@@ -90,7 +90,7 @@ namespace form1
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "HomeU";
-            this.Size = new System.Drawing.Size(1016, 594);
+            this.Size = new System.Drawing.Size(1037, 594);
             this.Load += new System.EventHandler(this.HomeU_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
