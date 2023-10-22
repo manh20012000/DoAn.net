@@ -33,7 +33,6 @@ namespace form1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,7 +54,6 @@ namespace form1
             this.txttenkhs = new System.Windows.Forms.TextBox();
             this.txtgiatien = new System.Windows.Forms.TextBox();
             this.txtmota = new System.Windows.Forms.TextBox();
-            this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtDiemdon = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.cmbmadd = new System.Windows.Forms.ComboBox();
@@ -101,15 +99,6 @@ namespace form1
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã địa điểm";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(258, 255);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Địa điểm";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -131,7 +120,7 @@ namespace form1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(258, 223);
+            this.label7.Location = new System.Drawing.Point(258, 242);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 6;
@@ -158,7 +147,7 @@ namespace form1
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(258, 178);
+            this.label10.Location = new System.Drawing.Point(258, 194);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 13);
             this.label10.TabIndex = 9;
@@ -168,7 +157,7 @@ namespace form1
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(258, 140);
+            this.label11.Location = new System.Drawing.Point(258, 148);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 13);
             this.label11.TabIndex = 10;
@@ -187,7 +176,7 @@ namespace form1
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(273, 344);
+            this.btnThem.Location = new System.Drawing.Point(295, 356);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 13;
@@ -207,7 +196,7 @@ namespace form1
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(387, 344);
+            this.btnSua.Location = new System.Drawing.Point(433, 356);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 15;
@@ -285,7 +274,7 @@ namespace form1
             // 
             // txtgiatien
             // 
-            this.txtgiatien.Location = new System.Drawing.Point(620, 252);
+            this.txtgiatien.Location = new System.Drawing.Point(630, 251);
             this.txtgiatien.Name = "txtgiatien";
             this.txtgiatien.Size = new System.Drawing.Size(150, 20);
             this.txtgiatien.TabIndex = 24;
@@ -298,16 +287,9 @@ namespace form1
             this.txtmota.Size = new System.Drawing.Size(481, 48);
             this.txtmota.TabIndex = 25;
             // 
-            // txtDiachi
-            // 
-            this.txtDiachi.Location = new System.Drawing.Point(335, 255);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(186, 20);
-            this.txtDiachi.TabIndex = 26;
-            // 
             // txtDiemdon
             // 
-            this.txtDiemdon.Location = new System.Drawing.Point(335, 220);
+            this.txtDiemdon.Location = new System.Drawing.Point(335, 239);
             this.txtDiemdon.Name = "txtDiemdon";
             this.txtDiemdon.Size = new System.Drawing.Size(186, 20);
             this.txtDiemdon.TabIndex = 27;
@@ -333,7 +315,7 @@ namespace form1
             this.cmbpt.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cmbpt.Location = new System.Drawing.Point(342, 140);
+            this.cmbpt.Location = new System.Drawing.Point(342, 145);
             this.cmbpt.Name = "cmbpt";
             this.cmbpt.Size = new System.Drawing.Size(179, 21);
             this.cmbpt.TabIndex = 30;
@@ -342,7 +324,7 @@ namespace form1
             // cmbks
             // 
             this.cmbks.FormattingEnabled = true;
-            this.cmbks.Location = new System.Drawing.Point(342, 177);
+            this.cmbks.Location = new System.Drawing.Point(346, 191);
             this.cmbks.Name = "cmbks";
             this.cmbks.Size = new System.Drawing.Size(175, 21);
             this.cmbks.TabIndex = 31;
@@ -361,7 +343,7 @@ namespace form1
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(776, 255);
+            this.label15.Location = new System.Drawing.Point(786, 254);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(34, 18);
             this.label15.TabIndex = 33;
@@ -386,7 +368,7 @@ namespace form1
             // 
             // btclear
             // 
-            this.btclear.Location = new System.Drawing.Point(495, 344);
+            this.btclear.Location = new System.Drawing.Point(575, 356);
             this.btclear.Margin = new System.Windows.Forms.Padding(2);
             this.btclear.Name = "btclear";
             this.btclear.Size = new System.Drawing.Size(83, 23);
@@ -397,7 +379,7 @@ namespace form1
             // 
             // btTimkiem
             // 
-            this.btTimkiem.Location = new System.Drawing.Point(80, 384);
+            this.btTimkiem.Location = new System.Drawing.Point(138, 384);
             this.btTimkiem.Margin = new System.Windows.Forms.Padding(2);
             this.btTimkiem.Name = "btTimkiem";
             this.btTimkiem.Size = new System.Drawing.Size(80, 32);
@@ -408,7 +390,7 @@ namespace form1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 391);
+            this.textBox1.Location = new System.Drawing.Point(251, 391);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(222, 20);
@@ -437,7 +419,6 @@ namespace form1
             this.Controls.Add(this.cmbmadd);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.txtDiemdon);
-            this.Controls.Add(this.txtDiachi);
             this.Controls.Add(this.txtmota);
             this.Controls.Add(this.txtgiatien);
             this.Controls.Add(this.txttenkhs);
@@ -459,7 +440,6 @@ namespace form1
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -478,7 +458,6 @@ namespace form1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -500,7 +479,6 @@ namespace form1
         private System.Windows.Forms.TextBox txttenkhs;
         private System.Windows.Forms.TextBox txtgiatien;
         private System.Windows.Forms.TextBox txtmota;
-        private System.Windows.Forms.TextBox txtDiachi;
         private System.Windows.Forms.TextBox txtDiemdon;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.ComboBox cmbmadd;

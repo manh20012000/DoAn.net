@@ -59,6 +59,8 @@ namespace form1
             this.txtsovedat = new System.Windows.Forms.Label();
             this.txtsovechon = new System.Windows.Forms.TextBox();
             this.txtsdt = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btndnagkys
@@ -194,6 +196,7 @@ namespace form1
             // 
             // txttentour
             // 
+            this.txttentour.Enabled = false;
             this.txttentour.Location = new System.Drawing.Point(146, 280);
             this.txttentour.Name = "txttentour";
             this.txttentour.Size = new System.Drawing.Size(562, 20);
@@ -201,6 +204,7 @@ namespace form1
             // 
             // txtmatour
             // 
+            this.txtmatour.Enabled = false;
             this.txtmatour.Location = new System.Drawing.Point(536, 98);
             this.txtmatour.Name = "txtmatour";
             this.txtmatour.Size = new System.Drawing.Size(217, 20);
@@ -242,6 +246,7 @@ namespace form1
             // 
             // txtsove
             // 
+            this.txtsove.Enabled = false;
             this.txtsove.Location = new System.Drawing.Point(540, 200);
             this.txtsove.Name = "txtsove";
             this.txtsove.Size = new System.Drawing.Size(168, 20);
@@ -315,10 +320,32 @@ namespace form1
             // 
             // txtsdt
             // 
-            this.txtsdt.Location = new System.Drawing.Point(167, 189);
+            this.txtsdt.Location = new System.Drawing.Point(168, 190);
             this.txtsdt.Name = "txtsdt";
-            this.txtsdt.Size = new System.Drawing.Size(210, 20);
+            this.txtsdt.Size = new System.Drawing.Size(213, 20);
             this.txtsdt.TabIndex = 34;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(39, 411);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 13);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "MA NHÂN VIÊN";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 13;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.comboBox1.Location = new System.Drawing.Point(178, 411);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(174, 21);
+            this.comboBox1.Sorted = true;
+            this.comboBox1.TabIndex = 36;
             // 
             // formDangkytour
             // 
@@ -326,6 +353,8 @@ namespace form1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(810, 498);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.txtsdt);
             this.Controls.Add(this.txtsovechon);
             this.Controls.Add(this.txtsovedat);
@@ -356,9 +385,9 @@ namespace form1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btndnagkys);
+            this.Enabled = false;
             this.Name = "formDangkytour";
             this.Text = "formDangkytour";
-          
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +425,7 @@ namespace form1
         private System.Windows.Forms.Label txtsovedat;
         private System.Windows.Forms.TextBox txtsovechon;
         private System.Windows.Forms.TextBox txtsdt;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -58,24 +58,23 @@ namespace form1
         }
         private void btndnagkys_Click(object sender, EventArgs e)
         {
-           
 
-                if (txtten.Text == "" || txtthanhtien.Text == "")
+            Console.WriteLine(cbxgioitinh.SelectedItem.ToString(), txtsdt.Text, txtquequan.Text, dateTimeNgay.Value.ToString("yyyy-MM-dd"));
+            /*    if (txtten.Text == "" || txtthanhtien.Text == "")
             {
                 MessageBox.Show("vui lòng nhập lại thông tin");
             }
             else
             {
                 try { 
-                 Console.WriteLine(":gdhsgdhsgdhgb->>>>" + this.txtten.Text,this.txtquequan.Text, this.cbxgioitinh.SelectedValue, this.txtsdt.Text,  this.dateTimeNgay.Value);
-                string query = string.Format("insert into KhachHang(HoTen, GioiTinh, SDT, QueQuan, NgaySinh) values (N'{0}', N'{1}', '{2}' , N'{3}', '{4}')"
-                ,txtten.Text, cbxgioitinh.Text, txtsdt.Text, txtquequan.Text, dateTimeNgay.Value);
+               
+                string query = string.Format("insert into KhachHang(HoTen, GioiTinh, SDT, QueQuan, NgaySinh)values(n'{0}',n'{1}','{2}',n'{3}','{4}')",txtten.Text, cbxgioitinh.SelectedItem, txtsdt.Text, txtquequan.Text, dateTimeNgay.Value.ToString("yyyy-MM-dd"));
                     bool kt= ketnoi.Thucthi(query); 
                     soveconlai = int.Parse(txtsove.Text) - int.Parse(txtsovedat.Text);
                     if (kt)
                     {
                         Console.WriteLine(kt);
-                      /*  string updatve = string.Format("update TourDL set sove = '{0}' where Matour={1} ", tour.MaTour1.ToString(), soveconlai);
+                      *//*  string updatve = string.Format("update TourDL set sove = '{0}' where Matour={1} ", tour.MaTour1.ToString(), soveconlai);
                         bool update = ketnoi.Thucthi(updatve);
                         if (update) {
                             MessageBox.Show("Them thanh cong!");
@@ -85,7 +84,7 @@ namespace form1
                             MessageBox.Show("Them thât bại" +
                                 "!");
                         }
-                        */
+                        *//*
 
                     }
                     else
@@ -96,8 +95,8 @@ namespace form1
                 catch (Exception ex)
                 {
                     MessageBox.Show("Loi ket noi :" + ex.Message);
-                }
-            }
+                }*/
+           //}
         }
 
        

@@ -16,5 +16,10 @@ namespace form1
         {
             InitializeComponent();
         }
+
+        private void ThemKsan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

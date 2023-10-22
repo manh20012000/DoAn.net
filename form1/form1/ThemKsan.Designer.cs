@@ -156,6 +156,7 @@ namespace form1
             this.Controls.Add(this.label1);
             this.Name = "ThemKsan";
             this.Size = new System.Drawing.Size(825, 544);
+            this.Load += new System.EventHandler(this.ThemKsan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
