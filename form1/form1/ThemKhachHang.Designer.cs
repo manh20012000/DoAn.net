@@ -207,6 +207,7 @@ namespace form1
             this.Controls.Add(this.label1);
             this.Name = "ThemKhachHang";
             this.Size = new System.Drawing.Size(825, 525);
+            this.Load += new System.EventHandler(this.ThemKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

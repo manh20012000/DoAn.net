@@ -16,5 +16,10 @@ namespace form1
         {
             InitializeComponent();
         }
+
+        private void ThemKhachHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
