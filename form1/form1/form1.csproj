@@ -105,6 +105,12 @@
     <Compile Include="QLnhanvien.Designer.cs">
       <DependentUpon>QLnhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanlyThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanlyThongKe.Designer.cs">
+      <DependentUpon>QuanlyThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemDiadiem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </Compile>
     <EmbeddedResource Include="QLnhanvien.resx">
       <DependentUpon>QLnhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanlyThongKe.resx">
+      <DependentUpon>QuanlyThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemDiadiem.resx">
       <DependentUpon>ThemDiadiem.cs</DependentUpon>

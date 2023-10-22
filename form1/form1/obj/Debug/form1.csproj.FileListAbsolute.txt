@@ -36,3 +36,4 @@ D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.ThemDiadiem.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.ThemKsan.resources
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.csproj.AssemblyReference.cache
 D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.formDangkytour.resources
+D:\LaptrinhNet\DoAn.net\form1\form1\obj\Debug\form1.QuanlyThongKe.resources
