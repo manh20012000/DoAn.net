@@ -16,7 +16,7 @@ namespace form1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new QuanlyThongKe());
+            Application.Run(new FormTrangchuNhanVien());
         }
     }
 }
