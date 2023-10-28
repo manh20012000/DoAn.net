@@ -60,7 +60,7 @@ namespace form1
             this.txtsovechon = new System.Windows.Forms.TextBox();
             this.txtsdt = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxNhanvien = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btndnagkys
@@ -131,11 +131,11 @@ namespace form1
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(352, 16);
+            this.label9.Location = new System.Drawing.Point(276, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 24);
+            this.label9.Size = new System.Drawing.Size(212, 24);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Đăng ký Tour DL";
+            this.label9.Text = "Đăng ký Tour Du Lịch";
             // 
             // label10
             // 
@@ -334,26 +334,26 @@ namespace form1
             this.label16.TabIndex = 35;
             this.label16.Text = "MA NHÂN VIÊN";
             // 
-            // comboBox1
+            // cbxNhanvien
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 13;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxNhanvien.FormattingEnabled = true;
+            this.cbxNhanvien.ItemHeight = 13;
+            this.cbxNhanvien.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.comboBox1.Location = new System.Drawing.Point(178, 411);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 21);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 36;
+            this.cbxNhanvien.Location = new System.Drawing.Point(178, 411);
+            this.cbxNhanvien.Name = "cbxNhanvien";
+            this.cbxNhanvien.Size = new System.Drawing.Size(174, 21);
+            this.cbxNhanvien.Sorted = true;
+            this.cbxNhanvien.TabIndex = 36;
             // 
             // formDangkytour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(810, 498);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(816, 498);
+            this.Controls.Add(this.cbxNhanvien);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtsdt);
             this.Controls.Add(this.txtsovechon);
@@ -385,9 +385,9 @@ namespace form1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btndnagkys);
-            this.Enabled = false;
             this.Name = "formDangkytour";
             this.Text = "formDangkytour";
+            this.Load += new System.EventHandler(this.formDangkytour_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,6 +426,6 @@ namespace form1
         private System.Windows.Forms.TextBox txtsovechon;
         private System.Windows.Forms.TextBox txtsdt;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxNhanvien;
     }
 }

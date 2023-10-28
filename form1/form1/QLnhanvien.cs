@@ -24,10 +24,6 @@ namespace form1
             DataSet ds = kn.selectData(query);
             dataGridView1.DataSource = ds.Tables[0];
         }
-     
-
-      
-
         private void QLnhanvien_Load(object sender, EventArgs e)
         {
             getdata();

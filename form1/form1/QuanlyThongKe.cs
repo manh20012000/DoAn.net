@@ -29,8 +29,8 @@ namespace form1
 
             private void thongke()
             {
-                Console.WriteLine("ddi did may");
-                ThucHienThongKe(1, 2023);
+               
+                ThucHienThongKe(10, 2003);
                 /*  while (true)
                   {
                       // Lấy ngày hiện tại
@@ -67,18 +67,18 @@ namespace form1
 
                 giatien = Convert.ToDouble(value);
                 TongSoPhieu = Convert.ToInt32(value2);
-                Console.WriteLine(giatien + "ngyf dhbfhudbhbdshfbhusdbfhudbfhubsdhubfhsdbfhdsbfhus");
+               
                 DateTime now = DateTime.Now;
-                Console.WriteLine(TongSoPhieu + "ngyf dhbfhudbhbdshfbhusdbfhudbfhubsdhubfhsdbfhdsbfhus");
+        
                 int ngay = now.Day;     // Lấy ngày hiện tại
                 int Thang = now.Month;  // Lấy tháng hiện tại
                 int Nam = now.Year;
-                string ngaythongke = "" + Nam + "-" + Thang + "-" + ngay + "-";
+                string ngaythongke = "" + Nam + "-" + Thang + "-" + ngay ;
                 if (value != null)
                 {
-
+               
                     string sql = string.Format("insert into ThongKe(NgayThongKe , SoPhieuDangKy, TongSoTienDatTour)" +
-                    " values ('{0}', '{1}', '{2}'", ngaythongke, TongSoPhieu, giatien);
+                    " values ('{0}', {1}, {2})", ngaythongke, TongSoPhieu, giatien);
                     bool kt = kn.Thucthi(sql);
                     if (kt)
                     {
@@ -90,7 +90,12 @@ namespace form1
                         MessageBox.Show("Them that bai");
                 }
             }
+
+        private void QuanlyThongKe_Load(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 
 

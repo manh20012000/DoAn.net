@@ -19,13 +19,18 @@ namespace form1
         public int soveconlai = 0;
         public formDangkytour(Toudulich tour)
         {
-           
+            Ketnoi kn = new Ketnoi();
             InitializeComponent(); 
             this.tour=tour;
             txtmatour.Text = tour.MaTour1.ToString();
             txttentour.Text = tour.TenTour1.ToString();
             txtdongia.Text = tour.GiaTien.ToString();
             txtsove.Text = tour.Sove.ToString();
+            string query = "select MaNhanVien from NhanVien";
+            DataSet ds = kn.selectData(query);
+            cbxNhanvien.DataSource = ds.Tables[0];
+            cbxNhanvien.DisplayMember = "MaNhanVien";
+            cbxNhanvien.ValueMember = "MaNhanVien";
         }
 
       
@@ -58,25 +63,28 @@ namespace form1
         }
         private void btndnagkys_Click(object sender, EventArgs e)
         {
-
-            Console.WriteLine(cbxgioitinh.SelectedItem.ToString(), txtsdt.Text, txtquequan.Text, dateTimeNgay.Value.ToString("yyyy-MM-dd"));
-            /*    if (txtten.Text == "" || txtthanhtien.Text == "")
+            Console.WriteLine("giá trị dược log ra =>>"+txtsdt.Text+" | "+ txtquequan.Text+ " | " + dateTimeNgay.Value.ToString("yyyy-MM-dd")+"|"+cbxgioitinh.SelectedItem );
+            if (txtten.Text == "" || txtthanhtien.Text == "")
             {
                 MessageBox.Show("vui lòng nhập lại thông tin");
             }
             else
             {
-                try { 
                
-                string query = string.Format("insert into KhachHang(HoTen, GioiTinh, SDT, QueQuan, NgaySinh)values(n'{0}',n'{1}','{2}',n'{3}','{4}')",txtten.Text, cbxgioitinh.SelectedItem, txtsdt.Text, txtquequan.Text, dateTimeNgay.Value.ToString("yyyy-MM-dd"));
-                    bool kt= ketnoi.Thucthi(query); 
+                try
+                {
+
+                    string query = string.Format("insert into khachHang(HoTen, GioiTinh, SDT, QueQuan, NgaySinh)values(n'{0}',n'{1}','{2}',n'{3}','{4}')", txtten.Text, cbxgioitinh.SelectedItem, txtsdt.Text, txtquequan.Text, dateTimeNgay.Value.ToString("yyyy-MM-dd"));
+                    bool kt = ketnoi.Thucthi(query);
                     soveconlai = int.Parse(txtsove.Text) - int.Parse(txtsovedat.Text);
                     if (kt)
                     {
+
                         Console.WriteLine(kt);
-                      *//*  string updatve = string.Format("update TourDL set sove = '{0}' where Matour={1} ", tour.MaTour1.ToString(), soveconlai);
+                        string updatve = string.Format("update TourDL set sove = '{0}' where Matour={1} ", tour.MaTour1.ToString(), soveconlai);
                         bool update = ketnoi.Thucthi(updatve);
-                        if (update) {
+                        if (update)
+                        {
                             MessageBox.Show("Them thanh cong!");
                         }
                         else
@@ -84,7 +92,7 @@ namespace form1
                             MessageBox.Show("Them thât bại" +
                                 "!");
                         }
-                        *//*
+
 
                     }
                     else
@@ -95,10 +103,13 @@ namespace form1
                 catch (Exception ex)
                 {
                     MessageBox.Show("Loi ket noi :" + ex.Message);
-                }*/
-           //}
-        }
+                }
+                }
+            }
 
-       
+        private void formDangkytour_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
