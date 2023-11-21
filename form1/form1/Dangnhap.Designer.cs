@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dangnhap));
             this.btDangnhap1 = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,22 +62,14 @@
             this.txtEmail.Size = new System.Drawing.Size(467, 35);
             this.txtEmail.TabIndex = 2;
             // 
-            // txtMatkhau
-            // 
-            this.txtMatkhau.Location = new System.Drawing.Point(51, 365);
-            this.txtMatkhau.Multiline = true;
-            this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(467, 38);
-            this.txtMatkhau.TabIndex = 3;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.txtMatkhau);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtMatkhau);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.btDangnhap1);
             this.panel1.Font = new System.Drawing.Font("Eras Medium ITC", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,6 +77,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(577, 518);
             this.panel1.TabIndex = 4;
+            // 
+            // txtMatkhau
+            // 
+            this.txtMatkhau.Location = new System.Drawing.Point(51, 374);
+            this.txtMatkhau.Name = "txtMatkhau";
+            this.txtMatkhau.Size = new System.Drawing.Size(467, 30);
+            this.txtMatkhau.TabIndex = 8;
+            this.txtMatkhau.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
@@ -135,7 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "Dangnhap";
-            this.Size = new System.Drawing.Size(580, 518);
+            this.Size = new System.Drawing.Size(577, 518);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -147,11 +147,11 @@
 
         private System.Windows.Forms.Button btDangnhap1;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtMatkhau;
     }
 }

@@ -74,6 +74,7 @@
             this.txtXacnhanmk.Name = "txtXacnhanmk";
             this.txtXacnhanmk.Size = new System.Drawing.Size(451, 37);
             this.txtXacnhanmk.TabIndex = 3;
+            this.txtXacnhanmk.UseSystemPasswordChar = true;
             // 
             // txtMK
             // 
@@ -82,6 +83,7 @@
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(451, 38);
             this.txtMK.TabIndex = 2;
+            this.txtMK.UseSystemPasswordChar = true;
             // 
             // txtTendangnhap
             // 

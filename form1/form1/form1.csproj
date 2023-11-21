@@ -32,8 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangKiTourU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DangKiTourU.Designer.cs">
+      <DependentUpon>DangKiTourU.cs</DependentUpon>
+    </Compile>
     <Compile Include="dangky.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -62,21 +75,107 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDangkytour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDangkytour.Designer.cs">
+      <DependentUpon>formDangkytour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrangchuNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrangchuNhanVien.Designer.cs">
+      <DependentUpon>FormTrangchuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_thongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_thongke.Designer.cs">
+      <DependentUpon>frm_thongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeU.Designer.cs">
+      <DependentUpon>HomeU.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ketnoi.cs" />
+    <Compile Include="Model\Diadiem.cs" />
+    <Compile Include="Model\KhachHang.cs" />
+    <Compile Include="Model\NhaHang.cs" />
+    <Compile Include="Model\Nhanvien.cs" />
+    <Compile Include="Model\QuanLy.cs" />
+    <Compile Include="Model\Taikhoan.cs" />
+    <Compile Include="Model\TaophieTour.cs" />
+    <Compile Include="Model\Thongke.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLnhanvien.cs">
+    <Compile Include="Quanlythongke.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLnhanvien.Designer.cs">
-      <DependentUpon>QLnhanvien.cs</DependentUpon>
+    <Compile Include="Quanlythongke.Designer.cs">
+      <DependentUpon>Quanlythongke.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongKe.cs">
+    <Compile Include="quanlynhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThongKe.Designer.cs">
-      <DependentUpon>ThongKe.cs</DependentUpon>
+    <Compile Include="quanlynhanvien.Designer.cs">
+      <DependentUpon>quanlynhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemDiadiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemDiadiem.Designer.cs">
+      <DependentUpon>ThemDiadiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKsan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemKsan.Designer.cs">
+      <DependentUpon>ThemKsan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="themphuongtien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="themphuongtien.Designer.cs">
+      <DependentUpon>themphuongtien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemThongTinU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemThongTinU.Designer.cs">
+      <DependentUpon>ThemThongTinU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Themtour.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Themtour.Designer.cs">
+      <DependentUpon>Themtour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinNhanVienU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongTinNhanVienU.Designer.cs">
+      <DependentUpon>ThongTinNhanVienU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Toudulich.cs" />
+    <Compile Include="TourDulich.cs" />
+    <Compile Include="UseControlBaiViet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UseControlBaiViet.Designer.cs">
+      <DependentUpon>UseControlBaiViet.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DangKiTourU.resx">
+      <DependentUpon>DangKiTourU.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dangky.resx">
       <DependentUpon>dangky.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +184,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDangkytour.resx">
+      <DependentUpon>formDangkytour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrangchuNhanVien.resx">
+      <DependentUpon>FormTrangchuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_thongke.resx">
+      <DependentUpon>frm_thongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeU.resx">
+      <DependentUpon>HomeU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,11 +207,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QLnhanvien.resx">
-      <DependentUpon>QLnhanvien.cs</DependentUpon>
+    <EmbeddedResource Include="Quanlythongke.resx">
+      <DependentUpon>Quanlythongke.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe.resx">
-      <DependentUpon>ThongKe.cs</DependentUpon>
+    <EmbeddedResource Include="quanlynhanvien.resx">
+      <DependentUpon>quanlynhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemDiadiem.resx">
+      <DependentUpon>ThemDiadiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKsan.resx">
+      <DependentUpon>ThemKsan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themphuongtien.resx">
+      <DependentUpon>themphuongtien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemThongTinU.resx">
+      <DependentUpon>ThemThongTinU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Themtour.resx">
+      <DependentUpon>Themtour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinNhanVienU.resx">
+      <DependentUpon>ThongTinNhanVienU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UseControlBaiViet.resx">
+      <DependentUpon>UseControlBaiViet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +252,46 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Image\348547318_5445841702184801_4358999932594481525_n.jpg" />
+    <None Include="Resources\24-0.jpg" />
+    <None Include="Image\thongke.jpg" />
+    <None Include="Resources\back1.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\business.png" />
+    <None Include="Resources\route.png" />
+    <None Include="Resources\home-button.png" />
+    <None Include="Resources\live-popup-image.jpg" />
+    <None Include="Resources\icons8-location-48.png" />
+    <None Include="Resources\icons8-bus-48.png" />
+    <None Include="Resources\bus.png" />
+    <None Include="Resources\pen.png" />
+    <None Include="Resources\voucher.png" />
+    <None Include="Resources\coupon.png" />
+    <None Include="Resources\ticket.png" />
+    <None Include="Resources\magnifying-glass %281%29.png" />
+    <None Include="Resources\clean.png" />
+    <None Include="Resources\bin.png" />
+    <None Include="Resources\data-processing.png" />
+    <None Include="Resources\add-friend.png" />
+    <None Include="Resources\image002-9246-1590393898.jpg" />
+    <None Include="Resources\nen-mua-dong-ho-nam-hang-nao-cac-tieu-chi-lua-chon-thuong-02.2.1-800x575-800x575.jpg" />
+    <None Include="Resources\customer %281%29.png" />
+    <None Include="Resources\sync.png" />
+    <None Include="Resources\delete %284%29.png" />
+    <None Include="Resources\plus %285%29.png" />
+    <None Include="Resources\clear %282%29.png" />
+    <None Include="Resources\search %282%29.png" />
+    <None Include="Resources\search %281%29.png" />
+    <None Include="Resources\plus %284%29.png" />
+    <None Include="Resources\clear %281%291.png" />
+    <None Include="Resources\clear %281%29.png" />
+    <None Include="Resources\delete %283%29.png" />
+    <None Include="Resources\loop %281%29.png" />
+    <None Include="Resources\update.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
